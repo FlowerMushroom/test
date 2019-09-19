@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <script> 
+      $.ajax({
+          url: "http://www.a.com:3000/json",
+          method: "post",
+          data: {
+            username: "mafengshe"
+          },
+          success: function(da){
+            console.log(da);
+          }
+        })
+    </script>
+  </body>
+</html>
